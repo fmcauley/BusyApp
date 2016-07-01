@@ -7,6 +7,8 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="MainWindowController" customModule="BusyApp" customModuleProvider="target">
             <connections>
+                <outlet property="slider" destination="snK-Vm-GqY" id="3Gb-ev-tLT"/>
+                <outlet property="sliderStatusText" destination="toy-9c-l1X" id="WFZ-O2-0cG"/>
                 <outlet property="window" destination="4d8-9o-4j5" id="Ib9-BG-5bi"/>
             </connections>
         </customObject>
@@ -20,6 +22,36 @@
             <view key="contentView" id="LxE-H9-AwX">
                 <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <slider horizontalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="snK-Vm-GqY">
+                        <rect key="frame" x="18" y="58" width="20" height="194"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <sliderCell key="cell" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="right" sliderType="linear" id="BXj-Hu-ra0"/>
+                        <connections>
+                            <action selector="sliderState:" target="-2" id="bCv-78-q8K"/>
+                        </connections>
+                    </slider>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jGf-Ei-Ii0">
+                        <rect key="frame" x="14" y="13" width="130" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="push" title="Reset Controls" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Zi5-Hd-4Ny">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="resetControls:" target="-2" id="580-nN-C2K"/>
+                        </connections>
+                    </button>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9xD-Ov-Wxs">
+                        <rect key="frame" x="42" y="175" width="141" height="75"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="toy-9c-l1X">
+                            <font key="font" metaFont="system" size="24"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                </subviews>
             </view>
             <point key="canvasLocation" x="217" y="26"/>
         </window>
