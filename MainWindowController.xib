@@ -7,6 +7,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="MainWindowController" customModule="BusyApp" customModuleProvider="target">
             <connections>
+                <outlet property="showTickMarks" destination="rhA-X3-QJn" id="qcs-ld-j57"/>
                 <outlet property="slider" destination="snK-Vm-GqY" id="3Gb-ev-tLT"/>
                 <outlet property="sliderStatusText" destination="toy-9c-l1X" id="WFZ-O2-0cG"/>
                 <outlet property="window" destination="4d8-9o-4j5" id="Ib9-BG-5bi"/>
@@ -17,14 +18,14 @@
         <window title="Busy App" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" frameAutosaveName="" animationBehavior="default" id="4d8-9o-4j5">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="131" y="158" width="598" height="270"/>
+            <rect key="contentRect" x="131" y="158" width="612" height="433"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
             <view key="contentView" id="LxE-H9-AwX">
-                <rect key="frame" x="0.0" y="0.0" width="598" height="270"/>
+                <rect key="frame" x="0.0" y="0.0" width="612" height="433"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <slider horizontalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="snK-Vm-GqY">
-                        <rect key="frame" x="18" y="58" width="20" height="194"/>
+                        <rect key="frame" x="18" y="221" width="20" height="194"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <sliderCell key="cell" continuous="YES" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="right" sliderType="linear" id="BXj-Hu-ra0"/>
                         <connections>
@@ -32,7 +33,7 @@
                         </connections>
                     </slider>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jGf-Ei-Ii0">
-                        <rect key="frame" x="14" y="13" width="130" height="32"/>
+                        <rect key="frame" x="14" y="176" width="130" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="push" title="Reset Controls" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Zi5-Hd-4Ny">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -43,7 +44,7 @@
                         </connections>
                     </button>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9xD-Ov-Wxs">
-                        <rect key="frame" x="42" y="175" width="254" height="75"/>
+                        <rect key="frame" x="42" y="338" width="254" height="75"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" placeholderString="Slider stays the same." id="toy-9c-l1X">
                             <font key="font" metaFont="system" size="24"/>
@@ -52,7 +53,7 @@
                         </textFieldCell>
                     </textField>
                     <button fixedFrame="YES" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="bIg-dL-cSx">
-                        <rect key="frame" x="55" y="126" width="176" height="18"/>
+                        <rect key="frame" x="55" y="289" width="176" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="radio" title="Hide the slider tick marks" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="KPD-Mm-eqH">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -63,7 +64,7 @@
                         </connections>
                     </button>
                     <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uXD-7t-s9f">
-                        <rect key="frame" x="300" y="234" width="98" height="18"/>
+                        <rect key="frame" x="300" y="397" width="98" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="check" title="Uncheck me" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="9Uu-lD-0F0">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -74,9 +75,9 @@
                         </connections>
                     </button>
                     <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rhA-X3-QJn">
-                        <rect key="frame" x="55" y="150" width="182" height="18"/>
+                        <rect key="frame" x="55" y="313" width="182" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="radio" title="Show the slider tick marks" bezelStyle="regularSquare" imagePosition="left" alignment="left" sound="Funk" inset="2" id="ppD-Fq-A8U">
+                        <buttonCell key="cell" type="radio" title="Show the slider tick marks" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" sound="Funk" inset="2" id="ppD-Fq-A8U">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
@@ -86,8 +87,12 @@
                     </button>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="-229" y="77"/>
+            <point key="canvasLocation" x="-239" y="162"/>
         </window>
+        <buttonCell type="check" title="Check" bezelStyle="regularSquare" imagePosition="left" controlSize="small" inset="2" id="IPV-vi-78H">
+            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+            <font key="font" metaFont="smallSystem"/>
+        </buttonCell>
     </objects>
     <resources>
         <sound name="Funk"/>

@@ -14,12 +14,12 @@ class MainWindowController: NSWindowController {
     
     @IBOutlet weak var sliderStatusText: NSTextField!
     @IBOutlet weak var slider: NSSlider!
-    
-    @IBAction func resetControls(_ sender: NSButton) {
-        
-    }
+    @IBOutlet weak var showTickMarks: NSButton!
     
     // Actions
+    
+    @IBAction func resetControls(_ sender: NSButton) {
+        }
     
     @IBAction func sliderState(_ sender: NSSlider) {
         if (sender.integerValue > 50) {
@@ -43,12 +43,17 @@ class MainWindowController: NSWindowController {
     @IBAction func checkME(_ sender: NSButton) {
         
     }
-    override func windowDidLoad() {
-        super.windowDidLoad()
+    
+    override func windowWillLoad() {
+        super.windowWillLoad()
         
-
     }
     
+    override func windowDidLoad() {
+        super.windowDidLoad()
+
+    }
+        
     override var windowNibName: String? {
         return "MainWindowController"
     }
