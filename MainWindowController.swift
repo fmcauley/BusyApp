@@ -39,8 +39,13 @@ class MainWindowController: NSWindowController {
         }
         
     }
+    
+    @IBAction func checkME(_ sender: NSButton) {
+        
+    }
     override func windowDidLoad() {
         super.windowDidLoad()
+        
 
     }
     

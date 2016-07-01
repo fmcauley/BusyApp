@@ -51,17 +51,6 @@
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rhA-X3-QJn">
-                        <rect key="frame" x="55" y="150" width="182" height="18"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="radio" title="Show the slider tick marks" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="ppD-Fq-A8U">
-                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                        <connections>
-                            <action selector="toggleTickers:" target="-2" id="4M4-ai-Cb6"/>
-                        </connections>
-                    </button>
                     <button fixedFrame="YES" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="bIg-dL-cSx">
                         <rect key="frame" x="55" y="126" width="176" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -73,9 +62,34 @@
                             <action selector="toggleTickers:" target="-2" id="PJT-eZ-Ul9"/>
                         </connections>
                     </button>
+                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uXD-7t-s9f">
+                        <rect key="frame" x="300" y="234" width="98" height="18"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="check" title="Uncheck me" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="9Uu-lD-0F0">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="checkME:" target="-2" id="Vmv-BY-Gfb"/>
+                        </connections>
+                    </button>
+                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rhA-X3-QJn">
+                        <rect key="frame" x="55" y="150" width="182" height="18"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="radio" title="Show the slider tick marks" bezelStyle="regularSquare" imagePosition="left" alignment="left" sound="Funk" inset="2" id="ppD-Fq-A8U">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="toggleTickers:" target="-2" id="4M4-ai-Cb6"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="18" y="92"/>
+            <point key="canvasLocation" x="-229" y="77"/>
         </window>
     </objects>
+    <resources>
+        <sound name="Funk"/>
+    </resources>
 </document>
