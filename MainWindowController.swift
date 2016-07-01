@@ -11,14 +11,20 @@ import Cocoa
 class MainWindowController: NSWindowController {
     
     
-    @IBOutlet weak var sliderStatusText: NSTextFieldCell!
+    @IBOutlet weak var sliderStatusText: NSTextField!
     @IBOutlet weak var slider: NSSlider!
     
     @IBAction func resetControls(_ sender: NSButton) {
     }
     
     @IBAction func sliderState(_ sender: NSSlider) {
-        print("The state of the slider \(sender.integerValue)")
+        if (sender.integerValue > 50) {
+            sliderStatusText.stringValue = "Slider goes up!"
+        } else if (sender.integerValue < 50) {
+            sliderStatusText.stringValue = "Slider goes down!"
+        } else {
+            sliderStatusText.stringValue = "Slider stays the same"
+        }
     }
     
     override var windowNibName: String? {

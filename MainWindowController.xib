@@ -17,16 +17,16 @@
         <window title="Busy App" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" frameAutosaveName="" animationBehavior="default" id="4d8-9o-4j5">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="131" y="158" width="480" height="270"/>
+            <rect key="contentRect" x="131" y="158" width="598" height="270"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
             <view key="contentView" id="LxE-H9-AwX">
-                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                <rect key="frame" x="0.0" y="0.0" width="598" height="270"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <slider horizontalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="snK-Vm-GqY">
                         <rect key="frame" x="18" y="58" width="20" height="194"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <sliderCell key="cell" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="right" sliderType="linear" id="BXj-Hu-ra0"/>
+                        <sliderCell key="cell" continuous="YES" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="right" sliderType="linear" id="BXj-Hu-ra0"/>
                         <connections>
                             <action selector="sliderState:" target="-2" id="bCv-78-q8K"/>
                         </connections>
@@ -43,7 +43,7 @@
                         </connections>
                     </button>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9xD-Ov-Wxs">
-                        <rect key="frame" x="42" y="175" width="141" height="75"/>
+                        <rect key="frame" x="42" y="175" width="254" height="75"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="toy-9c-l1X">
                             <font key="font" metaFont="system" size="24"/>
@@ -53,7 +53,7 @@
                     </textField>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="217" y="26"/>
+            <point key="canvasLocation" x="276" y="26"/>
         </window>
     </objects>
 </document>
