@@ -41,6 +41,11 @@ class MainWindowController: NSWindowController {
     }
     
     @IBAction func checkME(_ sender: NSButton) {
+        if (sender.state == NSOnState) {
+            sender.title = "Uncheck me"
+        } else {
+            sender.title = "Check me"
+        }
         
     }
     
