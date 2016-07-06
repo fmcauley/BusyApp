@@ -7,9 +7,13 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="MainWindowController" customModule="BusyApp" customModuleProvider="target">
             <connections>
+                <outlet property="checkBox" destination="uXD-7t-s9f" id="mEx-IK-JFu"/>
+                <outlet property="revealedMessage" destination="4wo-Zn-kSt" id="2BO-yZ-Mu1"/>
+                <outlet property="secrectMessage" destination="0Mh-TL-9L8" id="Pto-ar-742"/>
                 <outlet property="showTickMarks" destination="rhA-X3-QJn" id="qcs-ld-j57"/>
                 <outlet property="slider" destination="snK-Vm-GqY" id="3Gb-ev-tLT"/>
                 <outlet property="sliderStatusText" destination="toy-9c-l1X" id="WFZ-O2-0cG"/>
+                <outlet property="sliderWithOutTickMarks" destination="rhA-X3-QJn" id="7Cv-9J-huY"/>
                 <outlet property="window" destination="4d8-9o-4j5" id="Ib9-BG-5bi"/>
             </connections>
         </customObject>
@@ -63,17 +67,6 @@
                             <action selector="toggleTickers:" target="-2" id="PJT-eZ-Ul9"/>
                         </connections>
                     </button>
-                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uXD-7t-s9f">
-                        <rect key="frame" x="300" y="397" width="98" height="18"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="check" title="Uncheck me" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="9Uu-lD-0F0">
-                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                        <connections>
-                            <action selector="checkME:" target="-2" id="Vmv-BY-Gfb"/>
-                        </connections>
-                    </button>
                     <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rhA-X3-QJn">
                         <rect key="frame" x="55" y="313" width="182" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -85,9 +78,52 @@
                             <action selector="toggleTickers:" target="-2" id="4M4-ai-Cb6"/>
                         </connections>
                     </button>
+                    <secureTextField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Mh-TL-9L8">
+                        <rect key="frame" x="302" y="314" width="290" height="22"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" usesSingleLineMode="YES" id="wyR-S8-lph">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            <allowedInputSourceLocales>
+                                <string>NSAllRomanInputSourcesLocaleIdentifier</string>
+                            </allowedInputSourceLocales>
+                        </secureTextFieldCell>
+                    </secureTextField>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XJs-aW-c1o">
+                        <rect key="frame" x="296" y="270" width="302" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="push" title="Reveal the secret message" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="sDD-A7-xPr">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="revelTheMessage:" target="-2" id="Zk7-3Q-BGX"/>
+                        </connections>
+                    </button>
+                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4wo-Zn-kSt">
+                        <rect key="frame" x="300" y="247" width="292" height="22"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="cGA-q1-XYc">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uXD-7t-s9f">
+                        <rect key="frame" x="300" y="397" width="98" height="18"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="check" title="Uncheck me" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="9Uu-lD-0F0">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="checkME:" target="-2" id="Vmv-BY-Gfb"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="-239" y="162"/>
+            <point key="canvasLocation" x="-239" y="161.5"/>
         </window>
         <buttonCell type="check" title="Check" bezelStyle="regularSquare" imagePosition="left" controlSize="small" inset="2" id="IPV-vi-78H">
             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
